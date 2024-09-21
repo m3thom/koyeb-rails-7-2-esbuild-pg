@@ -7,7 +7,7 @@ for (const k in process.env) {
 
 require("esbuild").context({
     entryPoints: [
-        // Instead of "app/assets/javascripts/application.js",
+        // Instead of "app/assets/javascripts/legacy_application.js",
         // We use wildcard here to watch all files
         "app/assets/javascripts/*.*",
         // Instead of "app/javascript/application.js",
