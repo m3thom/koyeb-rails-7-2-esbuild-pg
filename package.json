@@ -5,10 +5,11 @@
     "esbuild": "^0.23.1"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
+    "build": "node config/esbuild.config.js"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
-    "@hotwired/turbo-rails": "^8.0.10"
+    "@hotwired/turbo-rails": "^8.0.10",
+    "jquery": "^3.7.1"
   }
 }

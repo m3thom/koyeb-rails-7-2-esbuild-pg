@@ -1,0 +1,20 @@
+<%= javascript_include_tag "assets/javascripts/application", "data-turbo-track": "reload", defer: true %>
+
+<h4>Welcome to HOME!</h4>
+
+<div data-controller="hello">
+  Replace ME
+</div>
+
+<%= button_tag "My button",
+               type: :button,
+               class: "my-legacy-btn"
+%>
+
+<%= button_tag "My Controller",
+               type: :button,
+               data: {
+                 controller: "my",
+                 action: "click->my#myClick"
+               }
+%>
