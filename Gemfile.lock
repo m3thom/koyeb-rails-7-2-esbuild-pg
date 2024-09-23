@@ -1,3 +1,9 @@
+PATH
+  remote: vendor/engines/cyblorgh
+  specs:
+    cyblorgh (0.1.0)
+      rails (>= 7.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -287,6 +293,7 @@ DEPENDENCIES
   bootsnap
   brakeman
   capybara
+  cyblorgh!
   debug
   jbuilder
   jsbundling-rails

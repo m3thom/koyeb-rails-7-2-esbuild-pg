@@ -6,11 +6,18 @@ for (const k in process.env) {
 }
 
 require("esbuild").context({
-    entryPoints: [
-        // We don't use wildcard here to keep result with nested path
-        "app/assets/javascripts/application.js",
-        "app/javascript/application.js",
-    ],
+    // Formerly:
+    // entryPoints: [
+    //     "app/assets/javascripts/application.js",
+    //     "app/javascript/application.js",
+    //     "vendor/engines/cyblorgh/app/assets/javascripts/cyblorgh/application.js",
+    // ],
+    entryPoints: {
+        // "outdir (without file extension)": "infile (with file extension)"
+        "assets/javascripts/application": "app/assets/javascripts/application.js",
+        "javascript/application": "app/javascript/application.js",
+        "cyblorgh/assets/javascripts/cyblorgh/application": "vendor/engines/cyblorgh/app/assets/javascripts/cyblorgh/application.js",
+    },
     bundle: true,
     sourcemap: true,
     format: 'esm',

@@ -55,3 +55,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "cyblorgh", path: "vendor/engines/cyblorgh"

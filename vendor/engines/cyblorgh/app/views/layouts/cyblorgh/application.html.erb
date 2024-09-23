@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cyblorgh</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= yield :head %>
+  <%= javascript_include_tag "javascript/application", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "cyblorgh/assets/javascripts/cyblorgh/application", "data-turbo-track": "reload" %>
+
+  <%= stylesheet_link_tag "cyblorgh/application", media: "all" %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
