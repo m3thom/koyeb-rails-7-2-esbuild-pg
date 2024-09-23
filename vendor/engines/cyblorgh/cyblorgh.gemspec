@@ -1,8 +1,6 @@
-require_relative "lib/cyblorgh/version"
-
 Gem::Specification.new do |spec|
   spec.name        = "cyblorgh"
-  spec.version     = Cyblorgh::VERSION
+  spec.version     = "0.1.0"
   spec.authors     = [ "TODO: Write your name" ]
   spec.email       = [ "TODO: Write your email address" ]
   spec.homepage    = "TODO"

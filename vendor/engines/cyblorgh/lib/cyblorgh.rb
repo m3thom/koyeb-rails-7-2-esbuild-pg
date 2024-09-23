@@ -1,4 +1,3 @@
-require "cyblorgh/version"
 require "cyblorgh/engine"
 
 module Cyblorgh
