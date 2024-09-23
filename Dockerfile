@@ -57,8 +57,12 @@ COPY . .
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
+# app/assets/builds/.keep is REQUIRED for assets:precompile task to work correctly.
+# ref: https://github.com/rails/jsbundling-rails/issues/23#issuecomment-2172502204
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
+RUN mkdir app/assets/builds &&  \
+    touch app/assets/builds/.keep && \
+    SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
 
 RUN rm -rf node_modules
